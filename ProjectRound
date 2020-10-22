@@ -1,0 +1,101 @@
+JWT - from Project + medium article
+https://www.baeldung.com/hikaricp
+Why Redis https://medium.com/dugglabs/redis-vs-memcached-19ab88d6547c
+Why AWS - 
+Database agnostic applications https://dba-presents.com/index.php/other/my-thoughts/34-database-agnostic-applications
+Logging in Springboot - https://www.youtube.com/watch?v=lGrcZsw-hKQ
+
+
+Advantage and disadvantages of using SpringBoot
+Reduces the time spent on development and increases the overall efficiency of the development team.
+Helps to autoconfigure all components for a production-grade Spring app.
+Facilitates the creation and testing of Java-based applications by providing a default setup for unit and integration tests.
+Helps to avoid all the manual work of writing boilerplate code, annotations, and complex XML configurations.
+Comes with embedded HTTP servers like Jetty and Tomcat to test web applications.
+The integration of Spring Boot with the Spring ecosystem which includes Spring Data, Spring Security, Spring ORM, and Spring JDBC is easy.
+Provides many plugins that developers can use to work with embedded and in-memory databases smoothly and readily.
+Allows for easily connecting with database and queue services like Oracle, PostgreSQL, MySQL, MongoDB, Redis, Solr, ElasticSearch, Rabbit MQ, ActiveMQ, and many more.
+Provides admin support – you can manage via remote access to the application.
+Eases the dependency and comes with Embedded Servlet Container.
+Offers flexibility in configuring XML configurations, Java Beans, and Database Transaction.
+Offers easy access to Command Line Interface which makes the development and testing of Spring Boot apps built with Java or Groovy agile.
+
+
+Size - a typical Spring Boot app would require a considerable amount of Spring dependency files increasing the size of the deployment artifacts
+Startup time - the larger app you have, the longer it takes to start up. This can be an issue in a serverless environment like AWS Lambda, Google Cloud Functions, etc.
+Memory footprint - because of the many dependency files and the heavy use of reflection, Spring isn't lean on memory which could impact your cloud hosting costs
+Speed - Spring MVC's one thread per request design is inefficient for high concurrency. Webflux improves on that, but there's still room for improvement. See comparison with other web frameworks here: TechEmpower Framework Benchmarks.
+Learning curve - the Spring ecosystem is enormous and it takes time to get up to speed on its components and to understand how best to achieve certain tasks and to build certain features. The amount of various Spring annotations can be overwhelming and Webflux's Mono and Flux are different beasts altogether.
+
+REST APi 
+Advantages 
+https://openclassrooms.com/en/courses/6121936-build-your-web-projects-with-rest-apis/6268221-identify-the-advantages-of-a-rest-api
+
+Disadvantages
+ - takes slightly higher bandwidht as we need to send all the required data as part of request
+ -
+REST vs GraphQL
+https://www.youtube.com/watch?v=4akSaaEYJqs
+
+
+Lambda Expression
+https://www.youtube.com/watch?v=yb46iD5dJYY
+Advantages: 1. Conciseness 2. No extra class generated 3. Readability 4. Parallel execution possible
+
+Lambda expressions are used with Functional Interfaces also known as single abstract methods 
+https://www.youtube.com/watch?v=lhSx1HWaMDw
+https://www.geeksforgeeks.org/functional-interfaces-java/ 
+Predicate, BinaryOperator and  Function are some examples of FIs introduced in Java 8
+•	Predicate: The Predicate interface has an abstract method test which gives a Boolean value as a result for the specified argument. Its prototype is
+•	public interface Predicate
+•	{
+•	   public boolean test(T  t);
+ }
+•	BinaryOperator: The BinaryOperator interface has an abstract method apply which takes two argument and returns a result of same type. Its prototype is
+•	public interface BinaryOperator 
+•	{
+•	     public T apply(T x, T y);
+}       
+•	Function: The Function interface has an abstract method apply which takes argument of type T and returns a result of type R. Its prototype is
+•	public interface Function 
+•	{
+•	   public R apply(T t);
+}
+
+Stream API - Filter, Map and Reduce
+https://www.geeksforgeeks.org/stream-in-java/ 
+A stream consists of source followed by zero or more intermediate methods combined together (pipelined) and a terminal method to process the objects obtained from the source as per the methods described.
+•	No storage. A Stream is not a data structure, but only a view of a data source, which can be an array, a Java container or an I/O channel.
+•	A Stream is functional in nature. Any modifications to a Stream will not change the data sources. For example, filtering a Stream does not delete filtered elements, but generates a new Stream that does not contain filtered elements.
+
+
+Default methods in Interfaces - gives backward compatibility
+https://www.geeksforgeeks.org/default-methods-java/ 
+what happens when more than one interfaces have same default method
+
+Static method
+https://www.tutorialspoint.com/default-method-vs-static-method-in-an-interface-in-java 
+no issues with same static method in more than once class, as static methods are called with Interface name
+This feature enables us to add new functionality in the interfaces without breaking the existing contract of the implementing classes
+
+Private methods in java 9
+https://www.geeksforgeeks.org/private-methods-java-9-interfaces/ 
+GC in Java
+ https://www.youtube.com/watch?v=lXj6j9hVGLQ
+
+
+Advantage of Bitbucket over Github
+1.	Integration with Atlassian ecosystem
+2.	Pricing 
+Advantages for Jekins
+Jenkins is open-source and free to use. It is a preferred CI/CD tool by early-stage startups as well as large corporations since it has been under development for a long time.
+It is a rich plugin ecosystem. At the time of this article, there were close to 1500+ plugins available for use.
+Jenkins can be integrated with popular cloud platforms such as Amazon EC2, Google Cloud, VMWare vSphere, Digital Ocean, and more.
+
+Disadvantages
+1.	Jenkins has a lot of redundant plugins. Knowing which one to use takes some experimentation and failed attempts
+2.	Requires dedicated developers to learn and adapt to Jenkins
+
+ORM advantages/disadvantages
+1.	Hibernate has to be very carefully configured or it can generate vast numbers of unnecessary queries
+https://centralblue.co.uk/blog/2019/01/the-pros-and-cons-of-object-relational-mapping-orm 
